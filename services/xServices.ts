@@ -1,16 +1,11 @@
+import rahadMedia from "rahad-media-downloader";
+
 export const xServices = async (url: string) => {
-  try {
-    const { snapsave } = await import("snapsave-media-downloader");
-
-    const result = await snapsave(url);
-
-    if (!result.success) {
-      throw new Error(result.message);
+    try {
+        const result = await rahadMedia.twitter(url);
+        return result;
+    } catch (error) {
+        console.error("Error downloading Twitter video:", error);
+        throw error;
     }
-
-    return result.data;
-  } catch (err) {
-    console.error(err);
-    throw err;
-  }
 };

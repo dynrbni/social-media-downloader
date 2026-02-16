@@ -1,6 +1,9 @@
-declare module 'rahad-all-downloader' {
-    const rahad: {
-        alldl: (url: string) => Promise<any>;
-    };
-    export default rahad;
+declare module "rahad-media-downloader" {
+  const rahadMedia: {
+    twitter: (url: string) => Promise<any>;
+    instagram: (url: string) => Promise<any>;
+    tiktok: (url: string) => Promise<any>;
+  };
+
+  export default rahadMedia;
 }
