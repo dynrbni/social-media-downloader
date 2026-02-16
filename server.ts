@@ -4,7 +4,8 @@ import dotenv from 'dotenv';
 import tiktokRoutes from './routes/tiktok';
 import instagramRoutes from './routes/instagram';
 import xRoutes from './routes/x';
-import youtubeRoutes from './routes/youtube'; // Import router YouTube
+import youtubeRoutes from './routes/youtube';
+import facebookRoutes from './routes/facebook';
 
 dotenv.config(); 
 const app = express();
@@ -16,7 +17,8 @@ app.use(express.json());
 app.use('/api', tiktokRoutes);
 app.use('/api', instagramRoutes);
 app.use('/api', xRoutes);
-app.use('/api', youtubeRoutes); // Import dan gunakan router YouTube
+app.use('/api', youtubeRoutes);
+app.use('/api', facebookRoutes);
 
 app.get('/', (req: Request, res: Response) => {
   res.send('Welcome to Express & TypeScript Server');
