@@ -1,13 +1,14 @@
 {
-// Visit https://aka.ms/tsconfig to read more about this file
 "compilerOptions": {
-"outDir": "./dist", 
-"rootDir": "", 
-"target": "es6", 
-"module": "commonjs",
-"strict": true,
-"esModuleInterop": true,
-"skipLibCheck": true,
-"forceConsistentCasingInFileNames": true
+    "outDir": "./dist",
+    "rootDir": "./",
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "typeRoots": ["./types", "./node_modules/@types"]
   }
 }

@@ -1,11 +1,16 @@
-const { alldl } = require('rahad-all-downloader');
-
 export const xServices = async (url: string) => {
-    try {
-        const result = await alldl(url);
-        return result;
-    } catch (error) {
-        console.error("Error downloading Twitter video:", error);
-        throw error;
+  try {
+    const { snapsave } = await import("snapsave-media-downloader");
+
+    const result = await snapsave(url);
+
+    if (!result.success) {
+      throw new Error(result.message);
     }
+
+    return result.data;
+  } catch (err) {
+    console.error(err);
+    throw err;
+  }
 };
