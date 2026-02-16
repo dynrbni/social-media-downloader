@@ -1,0 +1,13 @@
+{
+// Visit https://aka.ms/tsconfig to read more about this file
+"compilerOptions": {
+"outDir": "./dist", 
+"rootDir": "", 
+"target": "es6", 
+"module": "commonjs",
+"strict": true,
+"esModuleInterop": true,
+"skipLibCheck": true,
+"forceConsistentCasingInFileNames": true
+  }
+}
