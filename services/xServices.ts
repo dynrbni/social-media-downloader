@@ -5,7 +5,7 @@ export const xServices = async (url: string) => {
         const result = await rahadMedia.twitter(url);
         return result;
     } catch (error) {
-        console.error("Error downloading Twitter video:", error);
+        console.error("Error downloading X/Twitter video:", error);
         throw error;
     }
 };
